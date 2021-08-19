@@ -20,8 +20,9 @@ def depois_request(exc):
     g.bd.close()
 
 @app.route('/')
+@app.route('/entradas')
 def exibir_entradas():
-    return "Aqui estarão as postagens!!"
+    return render_template('exibir_entradas.html')
 
 @app.route('/hello')
 def pagina_inicial():
